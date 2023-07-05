@@ -16,9 +16,18 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+function dosyaAdiniBul(dosyaYolu) {
+
+  if(dosyaYolu.includes("/")){
+      let sonuc = dosyaYolu.split("/")
+      return sonuc[sonuc.length-1]
+  }else {
+    return dosyaYolu
+  }
 }
+
+console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
+
 
 /*
   GÖREV 2
