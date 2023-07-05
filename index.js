@@ -47,10 +47,25 @@ console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
   örnek output: 104
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamaBul(array) {
+
+  let total = 0
+
+  if(array.length == 0){
+    return null
+  }
+  else {
+    for(let i = 0; i< array.length; i++){
+        
+      total = total + array[i]
+    }
+    return total / array.length
+  }
+    
+
 }
 
+console.log(ortalamaBul([4]))
 /*
   GÖREV 3
   - Input:  Bir sayı arrayini ve ortalama bulmaya yarayacak bir fonksiyonu parametre olarak alacak bir fonksiyon oluştur.
@@ -71,9 +86,28 @@ function ortalamaBul(/* kodlar buraya */) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+function ortalamadanBuyukleriBul(arrayUc,cbOrtalamaBul) {
+
+  const yeniDizi = [];
+
+  const ortalamaDeger = cbOrtalamaBul(arrayUc) // 46 Suanda
+
+  if(arrayUc.length == 0){
+    return null
+  }else {
+    for(let i = 0; i<=arrayUc.length; i++){
+      if(ortalamaDeger <= arrayUc[i] ){
+        
+        yeniDizi.push(arrayUc[i])
+      }
+    }
+    return yeniDizi;
+  }
+  
 }
+
+console.log(ortalamadanBuyukleriBul([4],ortalamaBul))
+
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
