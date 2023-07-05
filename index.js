@@ -49,20 +49,34 @@ console.log(dosyaAdiniBul("C:/Users/johnsmith/Music/Beethoven_5.mp3"))
 
 function ortalamaBul(array) {
 
-  let total = 0
+  // let total = 0
+
+  // if(array.length == 0){
+  //   return null
+  // }
+  // else {
+  //   for(let i = 0; i< array.length; i++){
+        
+  //     total = total + array[i]
+  //   }
+  //   return total / array.length
+  // }
 
   if(array.length == 0){
     return null
+  }else{
+    const odev2 = array.reduce((toplam,rakam) => {
+      return toplam + rakam
+   },0)
+   return odev2 / array.length 
   }
-  else {
-    for(let i = 0; i< array.length; i++){
-        
-      total = total + array[i]
-    }
-    return total / array.length
-  }
-    
 
+  
+
+  
+  
+    
+  
 }
 
 console.log(ortalamaBul([4]))
