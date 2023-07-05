@@ -88,21 +88,31 @@ console.log(ortalamaBul([4]))
 
 function ortalamadanBuyukleriBul(arrayUc,cbOrtalamaBul) {
 
-  const yeniDizi = [];
+  // const yeniDizi = [];
 
-  const ortalamaDeger = cbOrtalamaBul(arrayUc) // 46 Suanda
+  // const ortalamaDeger = cbOrtalamaBul(arrayUc) // 46 Suanda
+
+  // if(arrayUc.length == 0){
+  //   return null
+  // }else {
+  //   for(let i = 0; i<=arrayUc.length; i++){
+  //     if(ortalamaDeger <= arrayUc[i] ){
+        
+  //       yeniDizi.push(arrayUc[i])
+  //     }
+  //   }
+  //   return yeniDizi;
+  // }
+
+  const ortalamaDeger = cbOrtalamaBul(arrayUc)
+
+  const ilkFilter = arrayUc.filter((arrayUcfilter) => arrayUcfilter >= ortalamaDeger );
 
   if(arrayUc.length == 0){
     return null
-  }else {
-    for(let i = 0; i<=arrayUc.length; i++){
-      if(ortalamaDeger <= arrayUc[i] ){
-        
-        yeniDizi.push(arrayUc[i])
-      }
-    }
-    return yeniDizi;
   }
+
+  return ilkFilter;
   
 }
 
